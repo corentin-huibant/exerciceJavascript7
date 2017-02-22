@@ -14,15 +14,16 @@
         function valid() {
           var shoeSize = document.getElementById("pointure").value, year = document.getElementById("annee").value, result;
               if (isNaN(shoeSize) || isNaN(year)) {
-                result = "Cabrone !";
+                result = "Cabrone !"; //A la place d'alert, on stipule que result n'est pas possible avec des NaN
               }
               else {
-                result = ((((shoeSize * 2) + 5) * 50) - year) + 1766;
+                result = ((((shoeSize * 2) + 5) * 50) - year) + 1766; // calcul d'après instruction.
               }
-          return(result);
+          return(result); //retourne le resultat de la fonction
         }
+        // spécifier l'élément - créer un évènement sur le clique - appeler la fonction.
           document.getElementById("valider").addEventListener("click" , function() {
-            alert(valid());
+            alert(valid()); //affiche la fonction
           })
         </script>
     </body>
